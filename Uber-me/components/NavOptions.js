@@ -1,6 +1,7 @@
 import { View, Text, FlatList, TouchableOpacity , Image} from 'react-native'
 import React from 'react';
 import tw from 'tailwind-react-native-classnames';
+import { Icon } from 'react-native-elements';
 
 const data = [
   {
@@ -35,6 +36,11 @@ const NavOptions = () => {
          source={{uri:item.image}}
          />
          <Text style={tw`mt-2 text-lg `}>{item.title}</Text>
+         <Icon
+         style={tw`p-2 bg-black rounded-full w-10 mt-4`}
+         name='arrowright' color='white'
+         type='antdesign'
+         />
        </View>
       </TouchableOpacity>
     )}
